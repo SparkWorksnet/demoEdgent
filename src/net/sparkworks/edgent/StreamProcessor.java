@@ -15,7 +15,6 @@ import org.apache.edgent.topology.Topology;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import static org.apache.edgent.analytics.math3.stat.Statistic.*;
@@ -77,6 +76,7 @@ public class StreamProcessor {
         TStream<JsonObject> sensors = JsonAnalytics.aggregate(sensorWindow, "urn", "value", MIN, MAX, MEAN, STDDEV);
 
         // Filter so that only when the sensor is beyond 2.0 (absolute) is a reading sent.
+
         sensors = sensors.filter(j -> j.get("urn").getAsString().startsWith("0013a20040f6497b/0x331/sound"));
 
         return sensors;
