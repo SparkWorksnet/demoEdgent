@@ -25,7 +25,7 @@ under the License.
     <groupId>net.sparkworks.edgent</groupId>
     <version>0.1</version>
     <artifactId>demo-edgent</artifactId>
-    <name>demo-edgent</name>
+    <name>SparkWorks :: Apache Edgent Demo</name>
     <description>Sensor data stream processing using Apache Edgent</description>
     <url>https://github.com/SparkWorksnet/demoEdgent</url>
     <organization>
